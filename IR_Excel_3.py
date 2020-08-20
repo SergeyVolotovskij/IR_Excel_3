@@ -1,9 +1,6 @@
 # import the main libraries
-from colorama import init # for style
-from colorama import Fore # for style
-init()
 from openpyxl import load_workbook
-import pyexcel as p
+import pyexcel
 from openpyxl.styles import Font, colors
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Alignment
@@ -14,7 +11,7 @@ def re_converted(file):
     print(str(file) + ".xls ФАЙЛ ПРИНЯТ ДЛЯ КОНВЕРТАЦИИ!")
     file_xls = file + ".xls"
     file_xlsx = file + ".xlsx"
-    p.save_book_as(file_name=file_xls, dest_file_name=file_xlsx)
+    pyexcel.save_book_as(file_name=file_xls, dest_file_name=file_xlsx)
     print(file_xls + " СКОНВЕРТИРОВАН В .xlsx ")
     return file_xlsx
 
