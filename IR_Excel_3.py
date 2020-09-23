@@ -8,7 +8,7 @@ from openpyxl.styles.borders import Border, Side
 
 def re_converted(file):
     '''The function save the .xls file to .xlsx'''
-    print(str(file) + ".xls ФАЙЛ ПРИНЯТ ДЛЯ КОНВЕРТАЦИИ!")
+    print( str(file) + ".xls ФАЙЛ ПРИНЯТ ДЛЯ КОНВЕРТАЦИИ!")
     file_xls = file + ".xls"
     file_xlsx = file + ".xlsx"
     pyexcel.save_book_as(file_name=file_xls, dest_file_name=file_xlsx)
